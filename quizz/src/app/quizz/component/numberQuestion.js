@@ -18,6 +18,8 @@ export default function NumberQuestion({
     currentNumber,
     onFinish,
     isCurrentAnswered = false,
+    isReviewing,
+    setIsFinished
 }) {
     // --------------------------------------------------------------------------
     // 1. LOGIQUE DE NAVIGATION
@@ -70,20 +72,29 @@ export default function NumberQuestion({
               - Si c'est la dernière question : on affiche le bouton "Terminer le quizz".
               - Sinon : on affiche le bouton standard "Suivant".
             */}
-            {isLastQuestion ? (
-                <button
-                    className="animate__animated animate__pulse animate__infinite px-7 py-3 bg-green-600 hover:bg-green-700 text-white font-bold text-base rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105 active:scale-95"
-                    onClick={onFinish}
+            {isReviewing ? (
+               <button
+                    onClick={() => setIsFinished(true)}
+                    className="animate__animated animate__pulse animate__infinite px-7 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-xl shadow-lg transition"
                 >
-                    Terminer le quizz 🎉
+                    &larr; Retour au résumé
                 </button>
             ) : (
-                <button
-                    className="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-xl shadow hover:shadow-md transition-all duration-200 transform hover:translate-x-0.5 active:translate-x-0"
-                    onClick={handleNext}
-                >
-                    Suivant &rarr;
-                </button>
+                isLastQuestion ? (
+                    <button
+                        className="animate__animated animate__pulse animate__infinite px-7 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-xl shadow-lg transition"
+                        onClick={onFinish}
+                 >
+                        Terminer le quizz &#127881;
+                    </button>
+                ) : (
+                    <button
+                        className="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-xl shadow hover:shadow-md transition"
+                        onClick={handleNext}
+                    >
+                        Suivant &rarr;
+                    </button>
+                )
             )}
         </div>
     );
