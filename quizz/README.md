@@ -20,12 +20,6 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-For the leaderboard and the authentification to work you need to create a file ./qcmi3il/quizz/.env.local and
-copy this inside : 
-TURSO_DATABASE_URL=libsql://quizz-3il-db-kovaaksenjoyer.aws-eu-west-1.turso.io
-TURSO_AUTH_TOKEN=eyJhbGciOiJFZERTQSIsInR5cCI6IkpXVCJ9.eyJhIjoicnciLCJpYXQiOjE3OTEzODAxNTAsImlkIjoiMDFhMTE2OTMtMzgwMS03MTg3LTg5MzItYmMxNGQxYzk3YzA1Iiwia2lkIjoic0pQaVdnMzdvYWpHcEF5dUdRa2hWR1RCb2UzbndLc0RQSUFsekQ4cXh5OCIsInJpZCI6IjFhZWYwOGEzLWRkZjktNDVhNS1iYWRjLTJlMTQyMzYzNTQ1MSJ9.-9Xqde2cOA9_kErdUXjIRbo2w4z4RC1TJe-CwtESnPt_LjN6g0DzCL5sxr-J6_NSPETyToXiq399BX3d70xOAg
-
-
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
